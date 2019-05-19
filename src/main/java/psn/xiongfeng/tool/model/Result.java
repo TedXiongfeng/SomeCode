@@ -20,7 +20,7 @@ public class Result implements Serializable {
     //声明接口来控制返回对象中的成员属性，接口之间可以互相继承
     //Controller使用该注解则使用相应的成员变量
     @JsonView
-    interface WithoutData {
+    private interface WithoutData {
     }
 
     //于成员属性的get方法使用注解并注明配置的接口名称

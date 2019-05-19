@@ -16,6 +16,7 @@ import java.io.UnsupportedEncodingException;
 @RequestMapping(value = "/excel")
 public class ExcelController {
 
+    @Autowired
     private ExcelService excelService;
 
     @GetMapping(value = "/excelExport")
