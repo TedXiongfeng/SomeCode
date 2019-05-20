@@ -7,7 +7,6 @@ public class User {
 
     private String userName;
     //@JsonIgnore
-    //@JsonProperty(access = Access.WRITE_ONLY)
     private String passWord;
 
     public User(String userName, String passWord) {
