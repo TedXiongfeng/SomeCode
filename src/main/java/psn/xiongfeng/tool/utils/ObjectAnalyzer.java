@@ -10,7 +10,7 @@ public class ObjectAnalyzer {
     private ArrayList<Object> visited = new ArrayList<>();
 
     //将对象的详细信息处理成字符串返回
-    public String toString(Object obj) {
+    private String toString(Object obj) {
         if (obj == null) {
             return "null";
         }
@@ -59,7 +59,7 @@ public class ObjectAnalyzer {
                         if (t.isPrimitive()) {
                             result.append(val.toString());
                         } else {
-                            result.append(toString(val));
+                            result.append(toString(val));//如果是对象引用则递归
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
