@@ -68,9 +68,11 @@ public class ClassAnalyzer {
         for (Method method : methods) {
             Class<?> returnType = method.getReturnType();
             String typeName = returnType.getName();
-            if (typeName.startsWith("[")){//数组会显示为[开头
+            //数组会显示为[开头
+            if (typeName.startsWith("[")){
                 typeName = typeName.substring(2);
-                typeName = typeName.replace(";", "[]");//将;结尾替换为[]结尾
+                //将;结尾替换为[]结尾
+                typeName = typeName.replace(";", "[]");
             }
             String name = method.getName();
             builder.append(tab);
